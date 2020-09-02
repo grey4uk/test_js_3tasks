@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>TEST</title>
+</head>
+
+<body>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        .test2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #boxes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .test3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #target {
+            width: 1px;
+            height: 1px;
+        }
+    </style>
+    <h2>1. Результат роботи першого завдання в консолі</h2>
+    <div class="test2">
+        <h2>2. Створюєм блоки</h2>
+        <div id="controls">
+            <input type="number" min="0" max="100" step="1" class="js-input" />
+            <button type="button" data-action="create">Створить</button>
+            <button type="button" data-action="destroy">Очистить</button>
+        </div>
+        <div id="boxes"></div>
+    </div>
+    <div class="test3">
+        <h2>3. Шукаємо фото</h2>
+        <form id="search-form">
+            <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+        </form>
+        <div class="galleryBlock">
+            <!-- В этот список добавляй элементы галереи -->
+            <ul class="gallery js-gallery"></ul>
+
+            <!--
+          Модальное окно для полноразмерного изображения
+          Для того чтобы открыть, необходимо добавить на div.lightbox CSS-класс is-open
+        -->
+            <div class="lightbox js-lightbox">
+                <div class="lightbox__overlay"></div>
+
+                <div class="lightbox__content">
+                    <img class="lightbox__image" src="" />
+                </div>
+
+                <button type="button" class="lightbox__button" data-action="close-lightbox"></button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/coloredBlocks.js" type="module"></script>
+    <script src="./js/gallery.js" type="module"></script>
+</body>
+
+</html>
